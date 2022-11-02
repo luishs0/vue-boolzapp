@@ -8,10 +8,96 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     
+    <div class="container">
 
+        <div class="bg-up"></div>
+        <div class="bg-down"></div>
+
+        <div id="app" class="app">
+
+            <div class="app-left">
+                <div class="app-left-top">
+
+                    <div class="user-app">
+                        <div class="user-main"><img src="img/avatar_io.jpg" alt="">
+                            <p>Sofia</p>
+                        </div>
+                        
+                    
+                        <div class="user-icons">
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="new-msgs">
+
+                        <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
+                        
+                        <div class="text-bell">
+                            Ricevi nuove notiffiche <br>
+                            <small>Attiva notiffiche</small>
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="search">
+                        <div class="lens">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="search-input">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+
+
+
+                    <div class="users">
+
+                        <div class="user-contact" v-for="(contact, index) in contacts">
+                            <hr>
+                            <div class="user-contact-div">
+                                <div class="user-contact-img">
+                                    <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                </div>
+                                <div class="user-contact-text">
+                                    {{ contact.name }}
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div class="app-left-bottom">
+
+                </div>
+            </div>
+
+            <div class="app-right">
+                <div class="app-right-top">
+
+                </div>
+                <div class="app-right-bottom">
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
 

@@ -4,3 +4,194 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+}
+
+.bg-up {
+    width: 100%;
+    height: 15vh;
+    min-width: 675px;
+
+    background-color: #009688;
+}
+
+.bg-down {
+    width: 100%;
+    height: 85vh;
+    min-width: 675px;
+
+    background-color: #dadbd3;
+}
+
+@media screen and (max-width: 750px) {
+    .app {
+        width: 100%;
+    }
+}
+
+
+/* APP----------------------- */
+.app {
+    width: 85%;
+    height: 90%;
+    max-width: 1200px;
+    min-width: 675px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* DEBUG */
+    background-color: aquamarine;
+}
+
+/* LEFT */
+.app-left {
+    height: 100%;
+    width: 35%;
+    border-right: 1px solid black;
+    background-color: white;
+}
+
+.app-left-top {
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+.user-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 70px;
+    width: 100%;
+}
+
+.user-main {
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.user-main img {
+    height: 100%;
+    margin-right: .3rem;
+    border-radius: 50%;
+    padding: .4rem;
+}
+
+.user-icons i {
+    margin-right: .6rem;
+    cursor: pointer;
+    color: gray;
+}
+
+.new-msgs {
+    background-color: #8edafc;
+    display: flex;
+    padding: .7rem;
+}
+
+
+.new-msgs .bell {
+    color: #8edafc;
+    font-size: 1.1rem;
+    background-color: white;
+    padding: .7rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.text-bell small {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem .2rem;
+}
+
+.lens {
+    width: 10%;
+    color: gray;
+    text-align: center;
+    border: .5px solid black;
+    padding: .1rem .3rem;
+    cursor: pointer;
+    background-color: white;
+}
+
+.search-input {
+    width: 87%;
+}
+
+.search-input input {
+    width: 100%;
+}
+
+
+
+/* users--------------- */
+.users {
+    overflow: auto;
+    background-color: white;
+}
+
+.user-contact-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 50px;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.user-contact-div:hover {
+    background-color: #e9ebeb;
+}
+
+.user-contact-img {
+    height: 100%;
+}
+
+.users img {
+    height: 100%;
+    border-radius: 50%;
+    margin-right: .7rem;
+}
+
+hr {
+    width: 100%;
+}
+
+
+/* RIGHT */
+.app-right {
+    height: 100%;
+    width: 65%;
+}
+
+.app-right-top {
+    height: 70px;
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+
+
+
+
+
+

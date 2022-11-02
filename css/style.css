@@ -48,8 +48,8 @@
     display: flex;
     flex-wrap: wrap;
 
-    /* DEBUG */
-    background-color: aquamarine;
+    
+    background-color: #eaeaea;
 }
 
 /* LEFT */
@@ -220,21 +220,27 @@ hr {
 
 .app-right .app-right-top .me img {
     height: 100%;
+    border-radius: 50%;
+    padding: .7rem;
 }
 
 .app-right-bottom {
     height: calc(100%);
+    overflow: scroll;
 }
 
 .chat {
     background-image: url(../img/mine.jpg);
+    padding-top: 1rem;
+    overflow: auto;
     
     height: calc(100% - 60px);
+    max-height: calc(100% - 60px);
     width: 100%;
 }
 
 .texting-bar {
-    height: 60px;
+    height: 55px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -244,12 +250,37 @@ hr {
 .texting-bar i {
     width: 20%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
 
 .texting-bar input {
     width: 60%;
     padding: .7rem;
+}
+
+
+.msg-me:not(:empty){
+    max-width: calc(40% - .2rem);
+    min-width: 10%;
+    background-color: #d5f9ba;
+    margin-left: 60%;
+    padding: .7rem;
+    border-radius: 10px;
+    margin-bottom: .2rem;
+    margin-right: 2rem;
+    
+}
+
+.msg-you:not(:empty) {
+    max-width: calc(40% - .2rem);
+    min-width: 10%;
+    background-color: white;
+    margin-right: 40%;
+    padding: .7rem;
+    border-radius: 10px;
+    margin-bottom: .2rem;
+    margin-left: 2rem;
 }
 
 

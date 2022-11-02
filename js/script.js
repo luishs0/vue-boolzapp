@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        message: "",
         contacts: [
             {
                 name: 'Michele',
@@ -167,5 +168,28 @@ const { createApp } = Vue
             }
         ]
       }
+    },
+
+    methods: {
+        sendMsg: function() {
+            const msgSended = document.createElement("div");
+            msgSended.classList.add("msg-me");
+
+            const chat = document.querySelector(".chat");
+            msgSended.append(this.message);
+
+            chat.append(msgSended);
+            
+            this.message = "";
+
+            // --------
+            const msgReceived = document.createElement("div");
+            msgReceived.classList.add("msg-you");
+
+            msgReceived.innerHTML = "ok";
+
+            chat.append(msgReceived);
+            
+        }
     }
   }).mount('#app')

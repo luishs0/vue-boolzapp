@@ -184,7 +184,7 @@ const { createApp } = Vue
             const msgSended = document.createElement("div");
             msgSended.classList.add("msg-me");
 
-            const chat = document.querySelector(".chat");
+            const chat = document.querySelector(".chat.d-block");
             msgSended.append(this.msg);
 
             chat.append(msgSended);

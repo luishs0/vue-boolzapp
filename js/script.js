@@ -180,7 +180,7 @@ const { createApp } = Vue
     },
 
     methods: {
-        sendMsg: function() {
+        sendMsg: function(index) {
             const msgSended = document.createElement("div");
             msgSended.classList.add("msg-me");
 

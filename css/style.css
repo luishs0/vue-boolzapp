@@ -260,7 +260,7 @@ hr {
 }
 
 
-.msg-me:not(:empty){
+.msg-me:not(:empty), .sent{
     max-width: calc(40% - .2rem);
     min-width: 10%;
     background-color: #d5f9ba;
@@ -272,7 +272,7 @@ hr {
     
 }
 
-.msg-you:not(:empty) {
+.msg-you:not(:empty), .received {
     max-width: calc(40% - .2rem);
     min-width: 10%;
     background-color: white;
@@ -281,6 +281,18 @@ hr {
     border-radius: 10px;
     margin-bottom: .2rem;
     margin-left: 2rem;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
 }
 
 

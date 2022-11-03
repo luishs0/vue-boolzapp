@@ -66,7 +66,7 @@
 
                     <div class="users">
 
-                        <div class="user-contact" v-for="(contact, index) in contacts">
+                        <div class="user-contact" v-for="(contact, index) in contacts" @click="changePeople(index)">
                             <hr>
                             <div class="user-contact-div">
                                 <div class="user-contact-img">
@@ -85,9 +85,9 @@
 
             <div class="app-right">
                 <div class="app-right-top">
-                    <div class="me">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <p>Michele</p>
+                    <div class="me"  v-for="(contactNow, index) in contacts" :class="[peopleCounter === index ? 'd-flex' : 'd-none']">
+                        <img :src="'img/avatar' + contactNow.avatar + '.jpg'">
+                        <p>{{ contactNow.name }}</p>
                     </div>
                     <div class="right-icons">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -98,20 +98,20 @@
                 <div class="app-right-bottom">
                     <div class="chat">
                         
-                        <!-- <div class="msg-me">
+                        <div class="msg-me">
                             
                         </div>
 
                         <div class="msg-you">
                             
-                        </div> -->
+                        </div>
 
 
 
                     </div>
                     <div class="texting-bar">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input type="text" placeholder="scrivi un messaggio" v-model="message" @keyup.enter="sendMsg">
+                        <input type="text" placeholder="scrivi un messaggio" v-model="msg" @keyup.enter="sendMsg">
                         <i @click="sendMsg" class="fa-solid fa-paper-plane"></i>
                     </div>
                 </div>

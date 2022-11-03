@@ -3,12 +3,14 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: "",
+        peopleCounter: 0,
+        msg: "",
         contacts: [
             {
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
+                number: 0,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -31,6 +33,7 @@ const { createApp } = Vue
                 name: 'Fabio',
                 avatar: '_2',
                 visible: true,
+                number: 1,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -53,6 +56,7 @@ const { createApp } = Vue
                 name: 'Samuele',
                 avatar: '_3',
                 visible: true,
+                number: 2,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -75,6 +79,7 @@ const { createApp } = Vue
                 name: 'Alessandro B.',
                 avatar: '_4',
                 visible: true,
+                number: 3,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -92,6 +97,7 @@ const { createApp } = Vue
                 name: 'Alessandro L.',
                 avatar: '_5',
                 visible: true,
+                number: 4,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -109,6 +115,7 @@ const { createApp } = Vue
                 name: 'Claudia',
                 avatar: '_6',
                 visible: true,
+                number: 5,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -131,6 +138,7 @@ const { createApp } = Vue
                 name: 'Federico',
                 avatar: '_7',
                 visible: true,
+                number: 6,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -148,6 +156,7 @@ const { createApp } = Vue
                 name: 'Davide',
                 avatar: '_8',
                 visible: true,
+                number: 7,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -176,11 +185,11 @@ const { createApp } = Vue
             msgSended.classList.add("msg-me");
 
             const chat = document.querySelector(".chat");
-            msgSended.append(this.message);
+            msgSended.append(this.msg);
 
             chat.append(msgSended);
             
-            this.message = "";
+            this.msg = "";
 
             // --------
             const msgReceived = document.createElement("div");
@@ -188,8 +197,16 @@ const { createApp } = Vue
 
             msgReceived.innerHTML = "ok";
 
-            chat.append(msgReceived);
+            setTimeout(() => {
+                chat.append(msgReceived);
+            }, 1000);
             
-        }
+        },
+
+        changePeople: function(index) {
+            this.peopleCounter = index;
+        },
+
+        
     }
   }).mount('#app')

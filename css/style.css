@@ -154,7 +154,6 @@
     flex-wrap: wrap;
     align-items: center;
     height: 50px;
-    padding: .3rem;
     cursor: pointer;
 }
 
@@ -164,6 +163,7 @@
 
 .user-contact-img {
     height: 100%;
+    padding: .3rem;
 }
 
 .users img {

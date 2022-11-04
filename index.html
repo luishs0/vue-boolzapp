@@ -58,7 +58,7 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                         <div class="search-input">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searching" @keyup="searchUser">
                         </div>
                     </div>
 
@@ -67,8 +67,9 @@
                     <div class="users">
 
                         <div class="user-contact" v-for="(contact, index) in contacts" @click="changePeople(index)">
-                            <hr>
-                            <div class="user-contact-div">
+                            
+                            <div class="user-contact-div" :class="[contact.name.toLowerCase().includes(searching.toLowerCase()) ? 'd-flex' : 'd-none']">
+                                <hr>
                                 <div class="user-contact-img">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>

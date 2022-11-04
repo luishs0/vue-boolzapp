@@ -1,9 +1,11 @@
 const { createApp } = Vue
+let searchingUser;
 
   createApp({
     data() {
       return {
         peopleCounter: 0,
+        searching: "",
         msg: "",
         contacts: [
             {
@@ -191,6 +193,8 @@ const { createApp } = Vue
             
             this.msg = "";
 
+            
+
             // --------
             const msgReceived = document.createElement("div");
             msgReceived.classList.add("msg-you");
@@ -206,6 +210,12 @@ const { createApp } = Vue
         changePeople: function(index) {
             this.peopleCounter = index;
         },
+
+        searchUser: function(index) {
+            searchingUser = this.searching.toLowerCase();
+            console.log(searchingUser);
+
+        }
 
         
     }
